@@ -1,0 +1,24 @@
+"Host Name" enter: guest@cluster.colfaxresearch.com
+
+
+Find the downloaded key in Explorer, right-click on it and choose "Load into Pageant"
+If you are using stand-alone pageant.exe, add the key from the Pageant icon on the taskbar.
+
+Open PuTTY and under "Host Name" enter: guest@cluster.colfaxresearch.com
+Then click "Open" 
+
+When prompted to add the server key to PuTTY's cache, choose "Yes" 
+
+If everything goes well, you will see "SSH-2.0-OpenSSH_6.6.1" 
+You can close this window, you don't need it anymore.
+
+Open PuTTY again, in the sidebar go to Connection->Proxy 
+Under "Proxy Type", move the radio button to Local
+Under "Telnet command or local proxy command", enter:
+plink guest@cluster.colfaxresearch.com -nc %host:%port
+If you did not use the PuTTY installer package, spell out the full path to plink.exe
+Do NOT click Open or hit Enter, you are not done yet
+In the sidebar go back to Session
+Under "Host Name", enter: u49300@c008
+Under "Saved Sessions", enter: Colfax Cluster for Coursera
+Click Save 
